@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,18,0,0,5,39"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="true"/>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe Print" size="48" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="e8" green="e8" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Read Quran"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="1440" y="40" width="380" height="70"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="Selected">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" id="Button.disabledShadow" palette="3" red="ff" type="palette"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Selected"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SelectedActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="990" y="14" width="200" height="40"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="SurahList">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="114">
+            <StringItem index="0" value="1.AL-FATIHA (THE OPENING) 7 Ayahs"/>
+            <StringItem index="1" value="2.AL-BAQARA (THE COW) 286 Ayahs"/>
+            <StringItem index="2" value="3.AAL-E-IMRAN (THE FAMILY OF &apos;IMRAN, THE HOUSE OF &apos;IMRAN) 200 Ayahs"/>
+            <StringItem index="3" value="4.AN-NISA (WOMEN) 176 Ayahs"/>
+            <StringItem index="4" value="5.AL-MAEDA (THE TABLE, THE TABLE SPREAD) 120 Ayahs"/>
+            <StringItem index="5" value="6.AL-ANAAM (CATTLE, LIVESTOCK) 165 Ayahs"/>
+            <StringItem index="6" value="7.AL-ARAF (THE HEIGHTS) 206 Ayahs"/>
+            <StringItem index="7" value="8.AL-ANFAL (SPOILS OF WAR, BOOTY) 75 Ayahs"/>
+            <StringItem index="8" value="9.AT-TAWBA (REPENTANCE, DISPENSATION) 129 Ayahs"/>
+            <StringItem index="9" value="10.YUNUS (JONAH) 109 Ayahs"/>
+            <StringItem index="10" value="11.HUD (HUD) 123 Ayahs"/>
+            <StringItem index="11" value="12.YUSUF (JOSEPH) 111 Ayahs"/>
+            <StringItem index="12" value="13.AR-RAD (THE THUNDER) 43 Ayahs"/>
+            <StringItem index="13" value="14.IBRAHIM (ABRAHAM) 52 Ayahs"/>
+            <StringItem index="14" value="15.AL-HIJR (AL-HIJR, STONELAND, ROCK CITY) 99 Ayahs"/>
+            <StringItem index="15" value="16.AN-NAHL (THE BEE) 128 Ayahs"/>
+            <StringItem index="16" value="17.AL-ISRA (ISRA&apos;, THE NIGHT JOURNEY, CHILDREN OF ISRAEL) 111 Ayahs"/>
+            <StringItem index="17" value="18.AL-KAHF (THE CAVE) 110 Ayahs"/>
+            <StringItem index="18" value="19.MARYAM (MARY) 98 Ayahs"/>
+            <StringItem index="19" value="20.TA-HA (TA-HA) 135 Ayahs"/>
+            <StringItem index="20" value="21.AL-ANBIYA (THE PROPHETS) 112 Ayahs"/>
+            <StringItem index="21" value="22.AL-HAJJ (THE PILGRIMAGE) 78 Ayahs"/>
+            <StringItem index="22" value="23.AL-MUMENOON (THE BELIEVERS) 118 Ayahs"/>
+            <StringItem index="23" value="24.AN-NOOR (THE LIGHT) 64 Ayahs"/>
+            <StringItem index="24" value="25.AL-FURQAN (THE CRITERION, THE STANDARD) 77 Ayahs"/>
+            <StringItem index="25" value="26.ASH-SHUARA (THE POETS) 227 Ayahs"/>
+            <StringItem index="26" value="27.AN-NAML (THE ANT, THE ANTS) 93 Ayahs"/>
+            <StringItem index="27" value="28.AL-QASAS (THE STORY, STORIES) 88 Ayahs"/>
+            <StringItem index="28" value="29.AL-ANKABOOT (THE SPIDER) 69 Ayahs"/>
+            <StringItem index="29" value="30.AR-ROOM (THE ROMANS, THE BYZANTINES) 60 Ayahs"/>
+            <StringItem index="30" value="31.LUQMAN (LUQMAN) 34 Ayahs"/>
+            <StringItem index="31" value="32.AS-SAJDA (THE PROSTRATION,WORSHIP, ADORATION) 30 Ayahs"/>
+            <StringItem index="32" value="33.AL-AHZAB (THE CLANS, THE COALITION,THE COMBINED FORCES) 73 Ayahs"/>
+            <StringItem index="33" value="34.SABA (SABA, SHEBA) 54 Ayahs"/>
+            <StringItem index="34" value="35.FATIR (THE ANGELS, ORIGNATOR) 45 Ayahs"/>
+            <StringItem index="35" value="36.YA-SEEN (YA-SEEN) 83 Ayahs"/>
+            <StringItem index="36" value="37.AS-SAAFFAT (THOSE WHO SET THE RANKS,DRAWN UP IN RANKS) 182 Ayahs"/>
+            <StringItem index="37" value="38.SAD (THE LETTER SAD) 88 Ayahs"/>
+            <StringItem index="38" value="39.AZ-ZUMAR (THE TROOPS, THRONGS) 75 Ayahs"/>
+            <StringItem index="39" value="40.AL-GHAFIR (THE FORGIVER (GOD) ) 85 Ayahs"/>
+            <StringItem index="40" value="41.FUSSILAT (EXPLAINED IN DETAIL) 54 Ayahs"/>
+            <StringItem index="41" value="42.ASH-SHURA (COUNCIL, CONSULTATION) 53 Ayahs"/>
+            <StringItem index="42" value="43.AZ-ZUKHRUF (ORNAMENTS OF GOLD, LUXURY) 89 Ayahs"/>
+            <StringItem index="43" value="44.AD-DUKHAN (SMOKE) 59 Ayahs"/>
+            <StringItem index="44" value="45.AL-JATHIYA (CROUCHING) 37 Ayahs"/>
+            <StringItem index="45" value="46.AL-AHQAF (THE WIND-CURVED SANDHILLS, THE DUNES) 35 Ayahs"/>
+            <StringItem index="46" value="47.MUHAMMAD (MUHAMMAD) 38 Ayahs"/>
+            <StringItem index="47" value="48.AL-FATH (VICTORY, CONQUEST) 29 Ayahs"/>
+            <StringItem index="48" value="49.AL-HUJRAAT (THE PRIVATE APARTMENTS, THE INNER APARTMENTS) 18 Ayahs"/>
+            <StringItem index="49" value="50.QAF (THE LETTER QAF) 45 Ayahs"/>
+            <StringItem index="50" value="51.ADH-DHARIYAT (THE WINNOWING WINDS) 60 Ayahs"/>
+            <StringItem index="51" value="52.AT-TUR (THE MOUNT) 49 Ayahs"/>
+            <StringItem index="52" value="53.AN-NAJM (THE STAR) 62 Ayahs"/>
+            <StringItem index="53" value="54.AL-QAMAR (THE MOON) 55 Ayahs"/>
+            <StringItem index="54" value="55.AR-RAHMAN (THE BENEFICENT, THE MERCY GIVING) 78 Ayahs"/>
+            <StringItem index="55" value="56.AL-WAQIA (THE EVENT, THE INEVITABLE) 96 Ayahs"/>
+            <StringItem index="56" value="57.AL-HADID (THE IRON) 29 Ayahs"/>
+            <StringItem index="57" value="58.AL-MUJADILA (SHE THAT DISPUTETH, THE PLEADING WOMAN) 22 Ayahs"/>
+            <StringItem index="58" value="59.AL-HASHR (EXILE, BANISHMENT) 24 Ayahs"/>
+            <StringItem index="59" value="60.AL-MUMTAHINA (SHE THAT IS TO BE EXAMINED, EXAMINING HER) 13 Ayahs"/>
+            <StringItem index="60" value="61.AS-SAFF (THE RANKS, BATTLE ARRAY) 14 Ayahs"/>
+            <StringItem index="61" value="62.AL-JUMUA (THE CONGREGATION, FRIDAY) 11 Ayahs"/>
+            <StringItem index="62" value="63.AL-MUNAFIQOON (THE HYPOCRITES) 11 Ayahs"/>
+            <StringItem index="63" value="64.AT-TAGHABUN (MUTUAL DISILLUSION, HAGGLING) 18 Ayahs"/>
+            <StringItem index="64" value="65.AT-TALAQ (DIVORCE) 12 Ayahs"/>
+            <StringItem index="65" value="66.AT-TAHRIM (BANNING, PROHIBITION) 12 Ayahs"/>
+            <StringItem index="66" value="67.AL-MULK (THE SOVEREIGNTY, CONTROL) 30 Ayahs"/>
+            <StringItem index="67" value="68.AL-QALAM (THE PEN) 52 Ayahs"/>
+            <StringItem index="68" value="69.AL-HAAQQA (THE REALITY) 52 Ayahs"/>
+            <StringItem index="69" value="70.AL-MAARIJ (THE ASCENDING STAIRWAYS) 44 Ayahs"/>
+            <StringItem index="70" value="71.NOOH (NOOH) 28 Ayahs"/>
+            <StringItem index="71" value="72.AL-JINN (THE JINN) 28 Ayahs"/>
+            <StringItem index="72" value="73.AL-MUZZAMMIL (THE ENSHROUDED ONE, BUNDLED UP) 20 Ayahs"/>
+            <StringItem index="73" value="74.AL-MUDDATHTHIR (THE CLOAKED ONE, THE MAN WEARING A CLOAK) 56 Ayahs"/>
+            <StringItem index="74" value="75.AL-QIYAMA (THE RISING OF THE DEAD, RESURRECTION) 40 Ayahs"/>
+            <StringItem index="75" value="76.AL-INSAN (MAN) 31 Ayahs"/>
+            <StringItem index="76" value="77.AL-MURSALAT (THE EMISSARIES, WINDS SENT FORTH) 50 Ayahs"/>
+            <StringItem index="77" value="78.AN-NABA (THE TIDINGS, THE ANNOUNCEMENT) 40 Ayahs"/>
+            <StringItem index="78" value="79.AN-NAZIAT (THOSE WHO DRAG FORTH, SOUL-SNATCHERS) 46 Ayahs"/>
+            <StringItem index="79" value="80.ABASA (HE FROWNED) 42 Ayahs"/>
+            <StringItem index="80" value="81.AT-TAKWIR (THE OVERTHROWING) 29 Ayahs"/>
+            <StringItem index="81" value="82.AL-INFITAR (THE CLEAVING, BURSTING APART) 19 Ayahs"/>
+            <StringItem index="82" value="83.AL-MUTAFFIFIN (DEFRAUDING, THE CHEATS, CHEATING) 36 Ayahs"/>
+            <StringItem index="83" value="84.AL-INSHIQAQ (THE SUNDERING, SPLITTING OPEN) 25 Ayahs"/>
+            <StringItem index="84" value="85.AL-BUROOJ (THE MANSIONS OF THE STARS, CONSTELLATIONS) 22 Ayahs"/>
+            <StringItem index="85" value="86.AT-TARIQ (THE MORNING STAR, THE NIGHTCOMER) 17 Ayahs"/>
+            <StringItem index="86" value="87.AL-ALA (THE MOST HIGH, GLORY TO YOUR LORD IN THE HIGHEST) 19 Ayahs"/>
+            <StringItem index="87" value="88.AL-GHASHIYA (THE OVERWHELMING, THE PALL) 26 Ayahs"/>
+            <StringItem index="88" value="89.AL-FAJR (THE DAWN, DAYBREAK) 30 Ayahs"/>
+            <StringItem index="89" value="90.AL-BALAD (THE CITY, THIS COUNTRYSIDE) 20 Ayahs"/>
+            <StringItem index="90" value="91.ASH-SHAMS (THE SUN) 15 Ayahs"/>
+            <StringItem index="91" value="92.AL-LAIL (THE NIGHT) 21 Ayahs"/>
+            <StringItem index="92" value="93.AD-DHUHA (THE MORNING HOURS, MORNING BRIGHT) 11 Ayahs"/>
+            <StringItem index="93" value="94.AL-INSHIRAH (SOLACE, CONSOLATION, RELIEF) 8 Ayahs"/>
+            <StringItem index="94" value="95.AT-TIN (THE FIG, THE FIGTREE) 8 Ayahs"/>
+            <StringItem index="95" value="96.AL-ALAQ (THE CLOT, READ) 19 Ayahs"/>
+            <StringItem index="96" value="97.AL-QADR (POWER, FATE) 5 Ayahs"/>
+            <StringItem index="97" value="98.AL-BAYYINA (THE CLEAR PROOF, EVIDENCE) 8 Ayahs"/>
+            <StringItem index="98" value="99.AZ-ZALZALA (THE EARTHQUAKE) 8 Ayahs"/>
+            <StringItem index="99" value="100.AL-ADIYAT (THE COURSER, THE CHARGERS) 11 Ayahs"/>
+            <StringItem index="100" value="101.AL-QARIA (THE CALAMITY, THE STUNNING BLOW, THE DISASTER 11 Ayahs"/>
+            <StringItem index="101" value="102.AT-TAKATHUR (RIVALRY IN WORLD INCREASE, COMPETITION) 8 Ayahs"/>
+            <StringItem index="102" value="103.AL-ASR (THE DECLINING DAY, EVENTIDE, THE EPOCH) 3 Ayahs"/>
+            <StringItem index="103" value="104.AL-HUMAZA (THE TRADUCER, THE GOSSIPMONGER) 9 Ayahs"/>
+            <StringItem index="104" value="105.AL-FIL (THE ELEPHANT) 5 Ayahs"/>
+            <StringItem index="105" value="106.QURAISH (WINTER, QURAYSH) 4 Ayahs"/>
+            <StringItem index="106" value="107.AL-MAUN (SMALL KINDNESSES, ALMSGIVING, HAVE YOU SEEN) 7 Ayahs"/>
+            <StringItem index="107" value="108.AL-KAUTHER (ABUNDANCE, PLENTY) 3 Ayahs"/>
+            <StringItem index="108" value="109.AL-KAFIROON (THE DISBELIEVERS, ATHEISTS) 6 Ayahs"/>
+            <StringItem index="109" value="110.AN-NASR (SUCCOUR, DIVINE SUPPORT) 3 Ayahs"/>
+            <StringItem index="110" value="111.AL-MASADD (PALM FIBRE, THE FLAME) 5 Ayahs"/>
+            <StringItem index="111" value="112.AL-IKHLAS (SINCERITY) 4 Ayahs"/>
+            <StringItem index="112" value="113.AL-FALAQ (THE DAYBREAK, DAWN) 5 Ayahs"/>
+            <StringItem index="113" value="114.AN-NAS (MANKIND) 6 Ayahs"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SurahListActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="30" width="839" height="36"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="checkBox">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Translation"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="80" width="-1" height="43"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="name">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DejaVu Serif Condensed" size="24" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="ea" red="dc" type="rgb"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="170" y="120" width="1199" height="40"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="170" width="1250" height="550"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="matrixPanel">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f5" green="f4" red="f2" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="2038" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="759" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/quran/desktopwallpapers.org.ua-6378.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="990" height="1010"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/quran/desktopwallpapers.org.ua-6378.jpg"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabel3"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="990" y="130" width="1030" height="720"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="BACK">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Ubuntu" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="7" green="7" red="e" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Back"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BACKActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="990" y="70" width="200" height="40"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/quran/desktopwallpapers.org.ua-6378.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="970" y="0" width="760" height="130"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="Selected1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" id="Button.disabledShadow" palette="3" red="ff" type="palette"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Selected"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Selected1ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="990" y="30" width="200" height="34"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="Selected2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" id="Button.disabledShadow" palette="3" red="ff" type="palette"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Selected"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Selected2ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="990" y="30" width="200" height="34"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>

@@ -1,0 +1,320 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package quran;
+
+import java.awt.Color;
+import java.awt.ComponentOrientation;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.List;
+import java.awt.TextArea;
+import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Queue;
+import java.util.Vector;
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.text.DefaultHighlighter;
+import javax.swing.text.Highlighter;
+import javax.swing.text.JTextComponent;
+
+public class SearchWord extends javax.swing.JFrame {
+SurahNames s= new SurahNames();
+String names[]=s.names;
+    /**
+     * Creates new form SearchWord
+     */
+    public SearchWord() {
+         this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
+        this.setAlwaysOnTop(true);
+        this.setResizable(false);
+        this.setVisible(true);
+        initComponents();
+        Toolkit tk= Toolkit.getDefaultToolkit();
+        int xsize=(int) tk.getScreenSize().getWidth();
+        int ysize= (int)tk.getScreenSize().getHeight();
+        this.setSize(xsize,ysize);
+                      Font font = new Font("B Fantezy", Font.PLAIN, 24);
+            SurahDisplay.setFont(font);
+            SurahDisplay.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);                        
+            SurahDisplay.setText("");
+            SurahDisplay.setLineWrap(true);
+            SurahDisplay.setWrapStyleWord(true);
+            SurahDisplay.setEditable(false);
+ 
+ 
+    }
+    
+     class MyHighlightPainter extends DefaultHighlighter.DefaultHighlightPainter{
+        public MyHighlightPainter(Color color){
+            super(color);
+        }
+     }
+        Highlighter.HighlightPainter myHighlightPainter= new MyHighlightPainter(Color.PINK);
+        public void Highligh(JTextComponent textComp, String pattern){
+            try{
+                Highlighter hilite=textComp.getHighlighter();
+                String text=SurahDisplay.getText();
+                int pos=0;
+                while((pos=text.toUpperCase().indexOf(pattern.toUpperCase(),pos))>=0){
+                    hilite.addHighlight(pos, pos+pattern.length(), myHighlightPainter);
+                    pos+=pattern.length();
+                }
+            }
+            catch(Exception e){
+                
+            }
+        }
+    
+    
+   public void searchfile(){
+   
+String ProperNames[]=s.ProperNames;
+Trie t=new Trie();
+t.doInsertion();
+
+Queue<String> q= t.search(wordSearch.getText().toLowerCase());
+SurahDisplay.setText("");
+if(q!=null){
+  Object row[]=q.toArray();
+  DefaultListModel<String> model = new DefaultListModel<>();
+ 
+for ( int i = 0; i < row.length-1; i++ ){
+    String k=row[i].toString().substring(1, row[i].toString().length()-1);
+   String[] j=k.split("\\:");
+   int ja=Integer.parseInt(j[0]);
+   int jb=Integer.parseInt(j[1]);
+  eachAyah(ja,jb,row[i].toString());
+   
+   String p= (i+1) + ". " + ProperNames[ja-1] + " Ayat No. "+ jb;
+  model.addElement(p);
+}
+
+SurahDisplay.setCaretPosition(0);
+String so="This Word Occurs " + row[row.length-1].toString() + " times in Quran";
+occur.setText(so);
+indexList.setModel(model);
+}
+else{
+    occur.setText("This word does not occur in Quran");
+    indexList.setListData(new Vector());
+}
+
+}
+   public void eachAyah(int ja, int jb, String ind){
+   try {            
+           String FileName=names[ja-1]+".txt";
+         //  panel.setVisible(true);
+                File file = new File((FileName));
+                BufferedReader bf = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+                String read=(String)bf.readLine();
+                int g=0; int d=1+(jb*2);
+                 while (g<d) {
+                     bf.readLine();
+                     g++;
+                 }
+                 String read2;
+                     while ((read=(String)bf.readLine()) != null) {                         
+                         String word[]=read.split(" ");                        
+                         if(word[0].equals(ind)){                             
+                    SurahDisplay.append(read+"\n");                  
+            }
+                     }
+                  bf.close();       }
+                     
+
+ catch(IOException e){
+            System.out.println("file nahi mili"+ e.getMessage());
+        }     
+   }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jScrollPane2 = new javax.swing.JScrollPane();
+        indexList = new javax.swing.JList();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        SurahDisplay = new javax.swing.JTextArea();
+        occur = new javax.swing.JLabel();
+        wordSearch = new javax.swing.JTextField();
+        button = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        BACK = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        indexList.setFont(new java.awt.Font("Yu Gothic", 1, 18)); // NOI18N
+        indexList.setForeground(new java.awt.Color(0, 51, 102));
+        jScrollPane2.setViewportView(indexList);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(30, 150, 330, 540);
+
+        SurahDisplay.setColumns(20);
+        SurahDisplay.setFont(new java.awt.Font("DejaVu Serif", 2, 14)); // NOI18N
+        SurahDisplay.setForeground(new java.awt.Color(0, 51, 102));
+        SurahDisplay.setRows(5);
+        jScrollPane4.setViewportView(SurahDisplay);
+
+        getContentPane().add(jScrollPane4);
+        jScrollPane4.setBounds(370, 150, 910, 540);
+
+        occur.setFont(new java.awt.Font("Nirmala UI Semilight", 1, 24)); // NOI18N
+        occur.setForeground(new java.awt.Color(207, 250, 253));
+        getContentPane().add(occur);
+        occur.setBounds(450, 110, 744, 34);
+
+        wordSearch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        wordSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wordSearchActionPerformed(evt);
+            }
+        });
+        getContentPane().add(wordSearch);
+        wordSearch.setBounds(20, 50, 320, 42);
+
+        button.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        button.setText("Search");
+        button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(button);
+        button.setBounds(380, 50, 134, 42);
+
+        jLabel2.setFont(new java.awt.Font("URW Palladio L", 3, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(248, 236, 236));
+        jLabel2.setText("Word Search");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(620, 40, 330, 57);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quran/desktopwallpapers.org.ua-6378.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(600, 150, 1290, 860);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quran/desktopwallpapers.org.ua-6378.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(-150, 150, 750, 600);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quran/desktopwallpapers.org.ua-6378.jpg"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 0, 1010, 150);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quran/desktopwallpapers.org.ua-6378.jpg"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(1010, 130, 560, 20);
+
+        BACK.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        BACK.setText("Back");
+        BACK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BACKActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BACK);
+        BACK.setBounds(1060, 30, 140, 40);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quran/desktopwallpapers.org.ua-6378.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(1010, 0, 790, 130);
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void wordSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wordSearchActionPerformed
+
+    private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
+      this.searchfile();
+      Highligh(SurahDisplay,wordSearch.getText());
+    }//GEN-LAST:event_buttonActionPerformed
+
+    private void BACKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BACKActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new menuPage().setVisible(true);
+    }//GEN-LAST:event_BACKActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(SearchWord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SearchWord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(SearchWord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(SearchWord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+     
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                
+                new SearchWord().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BACK;
+    private javax.swing.JTextArea SurahDisplay;
+    private javax.swing.JButton button;
+    private javax.swing.JList indexList;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel occur;
+    private javax.swing.JTextField wordSearch;
+    // End of variables declaration//GEN-END:variables
+
+     
+}
